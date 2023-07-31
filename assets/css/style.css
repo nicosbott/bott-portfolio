@@ -1,0 +1,144 @@
+/* styling within general */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --dark-blue: #263849;
+    --light-blue: #35bcbf;
+    --white: white;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', monospace;
+    line-height: 1.5;
+}
+/* styling within header contents */
+header {
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 48px;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    line-height: 1;
+    padding: 5px 2% 5px 4%;
+    box-shadow: 2px 2px 2px var(--white);
+}
+
+header nav {
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+li a {
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+li a:active {
+    box-shadow: 1px 1px 1px var(--white);
+    font-size: 80%;
+}
+
+/* styling within background figure */
+.hero {
+    background-color: var(--white);
+    background-image: url("../images/pawprint.jpeg");
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero img {
+    height: 350px;
+    width: 175px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.quote {
+    margin-right: 30px;
+    margin-top: 150px;
+}
+
+.quote p {
+    color: var(--dark-blue);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* styling within main content */
+.content {
+    width: 80%;
+    padding-bottom: 80px;
+    margin: 30px auto 0 auto;
+    display: grid;
+    grid-template-columns: 15% 65%;
+    gap: 10%;
+}
+
+.section {
+    border-right: 4px solid var(--dark-blue);
+    text-align: end;
+    padding-right: 10px;
+    font-size: 16px;
+}
+
+.section h2 {
+    color: var(--dark-blue);
+    text-align: end;
+    font-weight: 700;
+}
+
+#card-column {
+    width: 100%;
+}
+
+/* styling within footer */
+.footer {
+    padding: 30px;
+    clear: both;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 20px;
+}
+
