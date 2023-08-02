@@ -40,7 +40,6 @@ header h1 {
 
 header nav {
     margin-right: 20px;
-    float: right;
     font-size: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -127,8 +126,25 @@ li a:active {
     font-weight: 700;
 }
 
-#card-column {
+.grid {
+    display: grid;
     width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    
+}
+
+.card1 {
+    grid-column: span 2; 
+}
+
+
+figcaption {
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    position: absolute;
+    padding: 10px;
+
 }
 
 /* styling within footer */
@@ -142,3 +158,8 @@ li a:active {
     font-size: 20px;
 }
 
+@media (max-width: 600px) {
+    header {
+        flex-direction: column
+    }
+}
