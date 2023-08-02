@@ -76,7 +76,6 @@ li a:active {
 .hero {
     background-color: var(--white);
     background-image: url("../images/pawprint.jpeg");
-    height: 320px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -105,12 +104,12 @@ li a:active {
 
 /* styling within main content */
 .content {
-    width: 80%;
+    width: 90%;
     padding-bottom: 80px;
     margin: 30px auto 0 auto;
     display: grid;
-    grid-template-columns: 15% 65%;
-    gap: 10%;
+    grid-template-columns: 20% 70%;
+    gap: 50px;
 }
 
 .section {
