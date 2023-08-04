@@ -7,7 +7,7 @@
 
 :root {
     --dark-blue: #263849;
-    --light-blue: #35bcbf;
+    --light-blue: #87CEEB; 
     --white: white;
 }
 
@@ -16,17 +16,17 @@ body {
     color: var(--dark-blue);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', monospace;
     line-height: 1.5;
+    width: 100%;
 }
 /* styling within header contents */
 header {
     background-color: var(--dark-blue);
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 0 5px 0;
 }
 
 header h1 {
@@ -38,37 +38,31 @@ header h1 {
     box-shadow: 2px 2px 2px var(--white);
 }
 
-header nav {
-    margin-right: 20px;
-    font-size: 20px;
-    display: flex;
+.upper-nav li{
+    display: inline-flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-header nav ul {
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    font-size: 20px;
     list-style-type: none;
 }
 
-header nav ul li {
-    display: inline-block;
-    justify-content: space-evenly;
-    margin-top: 10px;
-    margin-left: 25px;
-}
-
-li a {
+.upper-nav a {
     color: var(--light-blue);
     text-decoration: none;
 }
 
-li a:hover {
+.upper-nav li a:hover {
     background-color: var(--light-blue);
     color: var(--dark-blue);
+    box-shadow: 2px 2px 2px var(--white);
+    padding: 3px;
 }
 
-li a:active {
-    box-shadow: 1px 1px 1px var(--white);
+.upper-nav li a:active {
+    box-shadow: 2px 2px 2px var(--white);
     font-size: 80%;
 }
 
@@ -105,7 +99,7 @@ li a:active {
 /* styling within main content */
 .content {
     width: 90%;
-    padding-bottom: 80px;
+    padding-bottom: 30px;
     margin: 30px auto 0 auto;
     display: grid;
     grid-template-columns: 20% 70%;
@@ -114,51 +108,128 @@ li a:active {
 
 .section {
     border-right: 4px solid var(--dark-blue);
-    text-align: end;
-    padding-right: 10px;
     font-size: 16px;
 }
 
 .section h2 {
     color: var(--dark-blue);
     text-align: end;
-    font-weight: 700;
 }
 
 .grid {
     display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    
+    grid-template-columns: minmax(350px 350px);
+    grid-template-rows: minmax(225px 300px 375px);
+    margin: 40px auto 0px auto;
+    gap: 20px;  
 }
 
-.card1 {
+.one {
     grid-column: span 2; 
 }
 
-
-figcaption {
-    background-color: var(--dark-blue);
-    color: var(--light-blue);
-    position: absolute;
-    padding: 10px;
-
+.one, .two, .three, .four, .five {
+    border: 3px solid var(--dark-blue);
+    position: relative;
 }
 
+.figcap-title {
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 10px;
+    opacity: 0;
+}
+
+.card:hover .figcap-title {
+    opacity: .8;
+}
+
+.lower-nav {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 25px 0;
+    list-style-type: none;
+}
+
+.lower-nav a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.lower-nav a:hover {
+    background-color: var(--light-blue);
+    box-shadow: 2px 2px 2px var(--dark-blue);
+    opacity: .8;
+    padding: 3px;
+}
+
+.lower-nav a:active {
+    box-shadow: 2px 2px 2px var(--dark-blue);
+    font-size: 80%;
+}
 /* styling within footer */
+
 .footer {
-    padding: 30px;
-    clear: both;
     text-align: center;
 }
 
 .footer h2 {
+    color: var(--dark-blue);
     font-size: 20px;
 }
 
-@media (max-width: 600px) {
-    header {
-        flex-direction: column
+@media screen and (max-width: 700px) {
+    header, .upper-nav li {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px;
     }
+
+    .hero, .quote {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .content, .section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 20px;
+        align-content: center;
+        border-right: 0;
+        border-bottom: 4px solid var(--dark-blue);
+    }
+
+    .grid {
+        width: 50%;
+        display: grid;
+        grid-template-columns: 200px center;
+        grid-template-rows: 200px 250px 200px 200px 300px;
+        margin-top: 10px;
+    }
+
+    .one {    
+        grid-column: span 1;
+    }
+
+    .lower-nav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        line-height: 3;
+        padding: 0;
+    }
+
+
+
 }
