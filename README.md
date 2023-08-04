@@ -15,6 +15,8 @@ Allowed the links in the 'work' and 'contact me' sections to be functional to ex
 
 Applied features in CSS to incoporate advanced elements such as: flexbox, grids, pseudoelements, variables and use on different size screens using media query.
 
+Put comments throughout HTML and CSS denoting the start of each section for content and styling.
+
 ##
 The following image shows the web application's appearance and functionality:
 
@@ -23,7 +25,7 @@ The following image shows the web application's appearance and functionality:
 
 ## Installation
 
-[Link to deployed website]()
+[Link to deployed website](https://nicosbott.github.io/rbott-portfolio/)
 
 ## Usage
 Click any of the first three navigation links within top header to drop to associated section in the main body area.
