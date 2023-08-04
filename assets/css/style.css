@@ -66,7 +66,7 @@ header h1 {
     font-size: 80%;
 }
 
-/* styling within background figure */
+/* styling within background, or hero, figure */
 .hero {
     background-color: var(--white);
     background-image: url("../images/pawprint.jpeg");
@@ -98,9 +98,7 @@ header h1 {
 
 /* styling within main content */
 .content {
-    width: 90%;
-    padding-bottom: 30px;
-    margin: 30px auto 0 auto;
+    margin: 30px 0;
     display: grid;
     grid-template-columns: 20% 70%;
     gap: 50px;
@@ -118,10 +116,10 @@ header h1 {
 
 .grid {
     display: grid;
-    grid-template-columns: minmax(350px 350px);
-    grid-template-rows: minmax(225px 300px 375px);
-    margin: 40px auto 0px auto;
-    gap: 20px;  
+    grid-template-columns: auto auto;
+    grid-template-rows: 300px 400px 500px;
+    margin-top: 30px;
+    gap: 30px;  
 }
 
 .one {
@@ -129,7 +127,7 @@ header h1 {
 }
 
 .one, .two, .three, .four, .five {
-    border: 3px solid var(--dark-blue);
+    border: 4px solid var(--dark-blue);
     position: relative;
 }
 
@@ -173,7 +171,6 @@ header h1 {
     font-size: 80%;
 }
 /* styling within footer */
-
 .footer {
     text-align: center;
 }
@@ -183,7 +180,8 @@ header h1 {
     font-size: 20px;
 }
 
-@media screen and (max-width: 700px) {
+/* use of media query */
+@media screen and (max-width: 600px) {
     header, .upper-nav li {
         display: flex;
         flex-wrap: wrap;
@@ -199,25 +197,33 @@ header h1 {
     }
 
     .content, .section {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         align-content: center;
+        align-items: center;
+        text-align: center;
         border-right: 0;
-        border-bottom: 4px solid var(--dark-blue);
+        padding: 0 30px;
+        border-bottom: 3px solid var(--dark-blue);
     }
 
     .grid {
         width: 50%;
         display: grid;
-        grid-template-columns: 200px center;
-        grid-template-rows: 200px 250px 200px 200px 300px;
+        grid-template-columns: 225px;
+        grid-template-rows: 200px 200px 200px 200px 300px;
         margin-top: 10px;
     }
 
     .one {    
         grid-column: span 1;
+    }
+
+    .one, .two, .three, .four, .five {
+        border: 2px solid var(--dark-blue);
     }
 
     .lower-nav {
@@ -229,7 +235,4 @@ header h1 {
         line-height: 3;
         padding: 0;
     }
-
-
-
 }
